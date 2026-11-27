@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clínica Vida Plena — Cuidado próximo, medicina de verdade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#16382D;--forest2:#1F4A3B;--sage:#A8C3B0;--sage2:#D7E4DA;--cream:#F6F1E8;--paper:#FFFBF4;--ink:#1C241F;--muted:#5C6B63;--terracotta:#C17A4A;--line:#E4D8C8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Source Sans 3", "Source Sans Pro", system-ui, sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1120px, calc(100% - 40px));margin:0 auto}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:42px;height:42px}
+.logo strong{font-family:"Cormorant Garamond",Georgia,serif;font-size:22px;font-weight:600;color:var(--forest);letter-spacing:-.02em}
+.logo span{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:-2px}
+.nav-links{display:flex;gap:22px;list-style:none;font-size:15px;font-weight:500;color:var(--forest2)}
+.nav-links a{text-decoration:none}
+.nav-links a:hover{color:var(--terracotta)}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:0;cursor:pointer;font-weight:600;font-size:14.5px;border-radius:999px;padding:11px 20px;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--forest);color:#fff}
+.btn-primary:hover{background:var(--forest2)}
+.btn-ghost{background:transparent;color:var(--forest);border:1px solid var(--forest)}
+.hero{padding:28px 0 56px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:12px}
+h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:clamp(40px, 5.4vw, 64px);line-height:1.05;color:var(--forest);letter-spacing:-.03em;margin-bottom:16px}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:34em;margin-bottom:26px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.stats{display:flex;gap:28px;flex-wrap:wrap;padding-top:8px;border-top:1px solid var(--line)}
+.stats div b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:28px;color:var(--forest);font-weight:600;line-height:1}
+.stats div span{font-size:12px;color:var(--muted)}
+.hero-card{background:var(--forest);color:var(--sage2);border-radius:28px;padding:28px 26px 24px;min-height:420px;position:relative;overflow:hidden}
+.hero-card:before{content:"";position:absolute;right:-40px;top:-40px;width:220px;height:220px;border-radius:50%;background:rgba(168,195,176,.15)}
+.hero-card:after{content:"";position:absolute;left:-30px;bottom:-50px;width:180px;height:180px;border-radius:50%;background:rgba(193,122,74,.16)}
+.hero-card h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:30px;font-weight:600;color:#fff;position:relative;z-index:1;margin:8px 0 18px;line-height:1.15}
+.slots{position:relative;z-index:1;display:grid;gap:8px}
+.slot{background:rgba(255,255,255,.06);border:1px solid rgba(168,195,176,.25);border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;color:#fff;font-size:14px}
+.slot em{font-style:normal;color:var(--sage);font-size:12px}
+.pill{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--sage)}
+section.block{padding:64px 0}
+section.block h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(28px, 3.5vw, 40px);color:var(--forest);font-weight:600;letter-spacing:-.02em;margin:6px 0 10px}
+.sec-lead{color:var(--muted);max-width:38em;margin-bottom:28px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.svc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 20px 20px}
+.svc .ico{width:40px;height:40px;margin-bottom:12px;color:var(--forest)}
+.svc h3{font-family:"Cormorant Garamond",Georgia,serif;font-size:22px;font-weight:600;color:var(--forest);margin-bottom:6px}
+.svc p{font-size:14.5px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step n, .step .n{font-family:"Cormorant Garamond",Georgia,serif;font-size:42px;color:var(--sage);font-weight:600;line-height:1}
+.step h3{font-size:20px;font-family:"Cormorant Garamond",Georgia,serif;color:var(--forest);margin:4px 0}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.person{background:var(--paper);border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.avatar{height:160px;background:linear-gradient(160deg,var(--sage2),var(--sage) 55%,var(--forest2))}
+.avatar.t2{background:linear-gradient(160deg,#efe3d2,var(--terracotta) 70%,var(--forest))}
+.avatar.t3{background:linear-gradient(160deg,#e8efe9,#6f8f7c 60%,#16382d)}
+.person .body{padding:16px 16px 18px}
+.person h3{font-family:"Cormorant Garamond",Georgia,serif;font-size:22px;color:var(--forest);font-weight:600}
+.person .role{font-size:13px;color:var(--terracotta);font-weight:600;margin-bottom:6px}
+.person p{font-size:14px;color:var(--muted)}
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.quote{background:var(--forest);color:var(--sage2);border-radius:18px;padding:24px}
+.quote p{font-family:"Cormorant Garamond",Georgia,serif;font-size:22px;line-height:1.35;color:#fff;font-style:italic;margin-bottom:14px}
+.quote cite{font-style:normal;font-size:13px;color:var(--sage)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.hours{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px}
+.hours li{list-style:none;display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+.hours li:last-child{border-bottom:0}
+form{display:grid;gap:10px}
+input,textarea,select{width:100%;border:1px solid var(--line);background:#fff;border-radius:10px;padding:11px 12px;font:inherit;color:var(--ink)}
+textarea{min-height:90px;resize:vertical}
+.note{font-size:12px;color:var(--muted);margin-top:4px}
+footer.site{border-top:1px solid var(--line);padding:28px 0 36px;margin-top:20px;color:var(--muted);font-size:13px}
+footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.demo{letter-spacing:.06em;text-transform:uppercase;font-size:11px;font-weight:700;color:var(--terracotta)}
+@media (max-width:880px){
+  .nav-links{display:none}
+  .hero,.services,.steps,.team,.quotes,.contact{grid-template-columns:1fr}
+  .hero-card{min-height:auto}
+  h1{font-size:42px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#topo" id="topo">
+      <svg class="logo-mark" viewBox="0 0 42 42" aria-hidden="true">
+        <circle cx="21" cy="21" r="20" fill="#16382D"/>
+        <path d="M21 10c.4 4 3 7.2 7 9-4 1.6-6.6 5-7 9-.4-4-3-7.4-7-9 4-1.8 6.6-5 7-9z" fill="#A8C3B0"/>
+        <circle cx="21" cy="21" r="2.2" fill="#F6F1E8"/>
+      </svg>
+      <div><strong>Vida Plena</strong><span>Clínica</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#equipe">Equipe</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#contato">Agendar consulta</a>
+  </div>
+</header>
+
+<main>
+  <section class="wrap hero" aria-label="Apresentação">
+    <div>
+      <div class="eyebrow">Clínica multidisciplinar · Jardim das Águas</div>
+      <h1>Cuidado próximo, medicina de verdade.</h1>
+      <p class="lead">Acompanhamento clínico com tempo para ouvir, especialidades no mesmo endereço e uma agenda simples de marcar — presencial ou por teleconsulta.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contato">Agendar consulta</a>
+        <a class="btn btn-ghost" href="#servicos">Conhecer os serviços</a>
+      </div>
+      <div class="stats">
+        <div><b>12</b><span>especialidades</span></div>
+        <div><b>8h–20h</b><span>de segunda a sábado</span></div>
+        <div><b>24h</b><span>para confirmar seu horário</span></div>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="Próximos horários ilustrativos">
+      <div class="pill">Agenda da semana · exemplo</div>
+      <h2>Há horários nesta semana com a equipe clínica.</h2>
+      <div class="slots">
+        <div class="slot"><span>Dra. Helena Viana<br><em>Clínica geral · terça, 14h20</em></span><span>Livre</span></div>
+        <div class="slot"><span>Dr. Rafael Moura<br><em>Pediatria · quarta, 9h40</em></span><span>Livre</span></div>
+        <div class="slot"><span>Dra. Lúcia Benítez<br><em>Saúde da mulher · quinta, 16h00</em></span><span>1 vaga</span></div>
+        <div class="slot"><span>Teleconsulta<br><em>Retornos e orientação · sexta</em></span><span>Vagas</span></div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="block" id="servicos">
+    <div class="wrap">
+      <div class="eyebrow">O que oferecemos</div>
+      <h2>Cuidado completo, no ritmo da sua rotina.</h2>
+      <p class="sec-lead">Consultas, prevenção e exames de rotina em um só lugar, com profissionais que conversam entre si sobre o seu acompanhamento.</p>
+      <div class="services">
+        <article class="svc">
+          <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.4"/><path d="M20 11v18M11 20h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <h3>Clínica geral</h3>
+          <p>Primeiro atendimento, acompanhamento de rotina e coordenação do seu cuidado com as demais especialidades.</p>
+        </article>
+        <article class="svc">
+          <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.4"/><circle cx="20" cy="17" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M12 29c1.4-4 4.4-6 8-6s6.6 2 8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <h3>Pediatria</h3>
+          <p>Puericultura, vacinação orientada e atendimento de crianças e adolescentes, com tempo para as famílias.</p>
+        </article>
+        <article class="svc">
+          <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.4"/><path d="M20 13c3 3.2 7 6.2 7 10a7 7 0 1 1-14 0c0-3.8 4-6.8 7-10z" stroke="currentColor" stroke-width="1.5"/></svg>
+          <h3>Saúde da mulher</h3>
+          <p>Acompanhamento ginecológico, pré-natal e orientação preventiva, em um ambiente reservado e acolhedor.</p>
+        </article>
+        <article class="svc">
+          <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.4"/><rect x="13" y="12" width="14" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M17 17h6M17 21h6M17 25h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <h3>Exames de rotina</h3>
+          <p>Coleta e encaminhamento de exames frequentes, com devolutiva clara e integração ao seu prontuário da clínica.</p>
+        </article>
+        <article class="svc">
+          <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.4"/><path d="M12 24c2-6 5.5-10 8-10s6 4 8 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="20" cy="14" r="1.6" fill="currentColor"/></svg>
+          <h3>Saúde preventiva</h3>
+          <p>Check-ups, orientação alimentar e acompanhamento de fatores de risco, antes que se tornem um problema.</p>
+        </article>
+        <article class="svc">
+          <svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.4"/><rect x="12" y="14" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 14v-2h8v2" stroke="currentColor" stroke-width="1.4"/><circle cx="20" cy="20" r="1.6" fill="currentColor"/></svg>
+          <h3>Teleconsulta</h3>
+          <p>Retornos e orientação à distância, no mesmo padrão de cuidado, quando o deslocamento não é necessário.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="background:#efe8db">
+    <div class="wrap">
+      <div class="eyebrow">Como funciona</div>
+      <h2>Agendar é o passo mais simples.</h2>
+      <div class="steps">
+        <article class="step"><div class="n">01</div><h3>Escolha o horário</h3><p>Informe a especialidade e o melhor período. Confirmamos em até 24 horas, por WhatsApp ou e-mail.</p></article>
+        <article class="step"><div class="n">02</div><h3>Prepare a visita</h3><p>Você recebe um lembrete com endereço, documentos e, se for o caso, o link da teleconsulta.</p></article>
+        <article class="step"><div class="n">03</div><h3>Saia com um plano</h3><p>A consulta termina com orientação clara, pedidos de exame quando precisarem e o próximo passo já combinado.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="equipe">
+    <div class="wrap">
+      <div class="eyebrow">Corpo clínico (fictício)</div>
+      <h2>Profissionais que acompanham de verdade.</h2>
+      <p class="sec-lead">Nomes, trajetórias e retratos abaixo são ilustrativos, criados para este projeto demonstrativo.</p>
+      <div class="team">
+        <article class="person"><div class="avatar" aria-hidden="true"></div><div class="body"><h3>Dra. Helena Viana</h3><div class="role">Clínica geral · CRM fictício</div><p>Coordena o cuidado longitudinal e o primeiro atendimento da clínica.</p></div></article>
+        <article class="person"><div class="avatar t2" aria-hidden="true"></div><div class="body"><h3>Dr. Rafael Moura</h3><div class="role">Pediatria · CRM fictício</div><p>Acompanha crianças e adolescentes com ênfase em puericultura e prevenção.</p></div></article>
+        <article class="person"><div class="avatar t3" aria-hidden="true"></div><div class="body"><h3>Dra. Lúcia Benítez</h3><div class="role">Saúde da mulher · CRM fictício</div><p>Atendimento ginecológico e pré-natal, com escuta e plano compartilhado.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="depoimentos">
+    <div class="wrap">
+      <div class="eyebrow">Quem já se consultou</div>
+      <h2>Histórias de cuidado — exemplos.</h2>
+      <div class="quotes">
+        <blockquote class="quote"><p>“Saí da consulta entendendo o que precisava fazer, sem pressa e sem um jargão que eu não acompanhasse.”</p><cite>Mariana P. · paciente de rotina (depoimento fictício)</cite></blockquote>
+        <blockquote class="quote"><p>“Conseguimos encaixar o retorno da criança no mesmo dia da minha consulta. Isso mudou a nossa semana.”</p><cite>Carlos e Inês · família acompanhada (depoimento fictício)</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contato">
+    <div class="wrap contact">
+      <div>
+        <div class="eyebrow">Agende uma visita</div>
+        <h2>Estamos no Jardim das Águas.</h2>
+        <p class="sec-lead">Rua das Figueiras, 120 — Jardim das Águas, São Paulo (endereço fictício). Atendimento de segunda a sexta, das 8h às 20h, e sábados das 8h às 13h.</p>
+        <ul class="hours">
+          <li><span>Segunda a sexta</span><strong>8h – 20h</strong></li>
+          <li><span>Sábado</span><strong>8h – 13h</strong></li>
+          <li><span>Domingo e feriados</span><strong>Plantão de orientação</strong></li>
+          <li><span>Contato (exemplo)</span><strong>(11) 4000-2010</strong></li>
+        </ul>
+      </div>
+      <form action="#" method="get" onsubmit="event.preventDefault(); this.querySelector('.note').textContent='Formulário ilustrativo: nesta demonstração o pedido não é enviado.';">
+        <label>Nome<input type="text" name="nome" placeholder="Seu nome" required></label>
+        <label>Telefone ou e-mail<input type="text" name="contato" placeholder="Como falamos com você" required></label>
+        <label>Especialidade
+          <select name="esp">
+            <option>Clínica geral</option>
+            <option>Pediatria</option>
+            <option>Saúde da mulher</option>
+            <option>Exames de rotina</option>
+            <option>Teleconsulta</option>
+          </select>
+        </label>
+        <label>Mensagem<textarea name="msg" placeholder="Conte, se quiser, o motivo do agendamento"></textarea></label>
+        <button class="btn btn-primary" type="submit">Enviar pedido de agenda</button>
+        <p class="note">Projeto demonstrativo: o formulário não envia dados e não realiza agendamento real.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <div class="demo">Projeto demonstrativo</div>
+      <p>Clínica Vida Plena é uma marca fictícia, criada para portfólio profissional. Profissionais, depoimentos, horários e o endereço são exemplos.</p>
+    </div>
+    <p>Elaborado por Caio Azevedo Cardoso · 2026</p>
+  </div>
+</footer>
+</body>
+</html>

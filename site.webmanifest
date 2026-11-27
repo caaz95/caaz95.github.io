@@ -1,0 +1,22 @@
+{
+  "name": "Caio Azevedo Cardoso",
+  "short_name": "Caio Azevedo",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3eee4",
+  "theme_color": "#0b2a4a",
+  "icons": [
+    {
+      "src": "assets/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
